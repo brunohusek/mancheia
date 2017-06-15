@@ -1,0 +1,8 @@
+{
+  "name": "Mancheia",
+  "autoload": {
+    "psr-4": {
+        "Projeto\\": "src/Mancheia"
+    }
+  }
+}
