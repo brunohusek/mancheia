@@ -1,8 +1,20 @@
 {
   "name": "Mancheia",
+  "author": [
+    {
+      "name": "Bruno Husek",
+      "email": "brunohusek@gmail.com"
+    }
+  ],
+  "requeire": {
+    "php": ">=5.5.9"
+  },
+  "require-dev": {
+      "squizlabs/php_codesniffer": "*"
+  },
   "autoload": {
     "psr-4": {
-        "Projeto\\": "src/Mancheia"
+        "Mancheia\\": "src/Mancheia"
     }
   }
 }
