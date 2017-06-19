@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-        "Mancheia\\": "src/Mancheia"
+        "Mancheia\\": "src/Mancheia/"
     }
   }
 }
