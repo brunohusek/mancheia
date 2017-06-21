@@ -6,15 +6,17 @@
       "email": "brunohusek@gmail.com"
     }
   ],
-  "requeire": {
-    "php": ">=5.5.9"
+  "require": {
+    "php": ">=5.5.9",
+    "silex/silex": "~2.0",
+    "doctrine/dbal": "^2.5"
   },
   "require-dev": {
       "squizlabs/php_codesniffer": "*"
   },
   "autoload": {
     "psr-4": {
-        "Mancheia\\": "src/Mancheia/"
+        "Mancheia\\": "src/"
     }
   }
 }
