@@ -2,9 +2,9 @@
 require_once "../vendor/autoload.php";
 require 'templates/header.php';
 
-use Mancheia\Core\ServiceProviders;
-$app = new Silex();
-$app->register(new DatabaseServiceProvider());
+//use Mancheia\Core\ServiceProviders;
+//$app = new Silex();
+new Mancheia\Core\ServiceProviders\Database();
 ?>
 
 <style>

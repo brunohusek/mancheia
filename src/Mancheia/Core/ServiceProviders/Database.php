@@ -4,7 +4,7 @@ namespace Mancheia\Core\ServiceProviders;
 
 use Silex\Provider\DoctrineServiceProvider;
 
-class DatabaseServiceProvider implements ServiceProviderInterface
+class Database
 {
     public function register(Container $app)
     {

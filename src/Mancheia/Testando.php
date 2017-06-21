@@ -1,6 +1,6 @@
 <?php
 
-namespace Mancheia\ClassesDeTestes;
+namespace Mancheia;
 
 class Testando
 {
