@@ -1,3 +1,3 @@
 <?php
-root|my$SQL#3214
+  define('ROOT_DIR', __DIR__);
 ?>
