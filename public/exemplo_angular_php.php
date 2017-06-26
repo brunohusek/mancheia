@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="Login" lang="pt-br">
+<html lang="pt-br">
 <head>
 <?php require_once __DIR__ . "/templates/header.php"; ?>
 <title>Mancheia</title>
 </head>
-<body>
+<body ng-app="Login">
 
 <div ng-controller="pessoasCtrl">
   <h3>App PHP + AngularJS</h3>
@@ -12,6 +12,7 @@
     <b>Matricula:</b> {{pessoa.matricula}} <br/>
     <b>Nome:</b> {{pessoa.nome}}
   </div>
+  <button ng-click="adicionarMatricula()">Carregar</button>
 </div>
 
 <!-- Libs -->
