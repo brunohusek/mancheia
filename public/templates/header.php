@@ -3,5 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <script src="/js/angular.min.js"></script>
+<script src="/js/angular-ui-router.min.js"></script>
 <script src="/js/jquery-1.12.4.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

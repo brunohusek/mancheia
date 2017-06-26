@@ -1,8 +1,9 @@
 var app = angular.module('Login', []);
 
-app.factory('services', ['$http', function($http) {
+app.controller("pessoasCtrl", ["$scope", "$http", function($scope, $http) {
+  $scope.adicionarMatricula = function() {
     var obj={};
-    data = [{
+    var data = [{
             'matricula' : '4',
             'nome' : 'Priscilla Ballan'
         },{
@@ -10,23 +11,10 @@ app.factory('services', ['$http', function($http) {
                 'nome' : 'FULANO DE TAL'
             }];
     obj.getPessoas = function() { return $http.post('/app/exemplo_Logins.php', data); }
-    return obj;
-}]);
-
-app.controller("pessoasCtrl", ["$scope", function($scope) {
-  $scope.adicionarMatricula = function($scope, services) {
-    services.getPessoas().then( function(data) {
+    obj.getPessoas().then( function(data) {
         $scope.pessoas = data.data;
     } );
   };
 }]);
-
-/*
-app.controller("pessoasCtrl", function($scope, services) {
-  services.getPessoas().then( function(data) {
-      $scope.pessoas = data.data;
-  } );
-});
-*/
 
 app.run();
