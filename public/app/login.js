@@ -4,10 +4,9 @@ app.controller("ctlLogin", ["$scope", "$http", function($scope, $http) {
 
   $scope.Login = function() {
     var obj={};
-    console.log($scope.login);
-    obj.postLogin = function() { return $http.post('/app/exemplo_Logins.php', $scope.login); }
+    obj.postLogin = function() { return $http.post('/app/login.php', $scope.login); }
     obj.postLogin().then( function(data) {
-        $scope.resposta = "Tentando logar.";
+        $scope.resposta = data.data.status+" "+data.data.message;
     } );
   };
 }]);
