@@ -15,4 +15,4 @@ $conn = $conn->connect();
 $login = new Mancheia\Core\Services\Login();
 $return = $login->Login($conn,$username,$password);
 
-echo '{"status": 404, "message": "'.$return.'"}';
+echo '{"status": "'.$login->status.'", "message": "'.$return.'"}';

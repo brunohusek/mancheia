@@ -3,6 +3,7 @@
 namespace Mancheia\Core\Services;
 
 class Login {
+  public $status;
 
   public function Login($conn,$username,$password) {
     //Check for user and password
@@ -18,8 +19,10 @@ class Login {
       $sql->bindValue(':username', $username);
       $sql->execute();
       if($sql->rowCount()==0) {
+        $this->status = "404";
         return "Usuário e senha inválidos.";
       } else {
+        $this->status = "404";
         return "Senha inválida para este usuário.";
       }
 
@@ -28,8 +31,10 @@ class Login {
       $result = $sql->fetch();
       //Checking for user status
       if($result['status']<>1) {
+        $this->status = "404";
         return "Este usuário está inativo.";
       } else {
+        $this->status = "200";
 
         //Login
         return $result['name'];
